@@ -1,1 +1,38 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scelta Si/No</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fai una scelta: Si o No</h2>
+    <button id="siButton">Si</button>
+    <button id="noButton">No</button>
+    
+    <script>
+        // Funzione che gestisce il click sul pulsante "Si"
+        document.getElementById('siButton').addEventListener('click', function() {
+            alert('Hai scelto SI.');
+        });
+
+        // Funzione che gestisce il click sul pulsante "No"
+        document.getElementById('noButton').addEventListener('click', function() {
+            alert('Hai scelto NO.');
+        });
+    </script>
+</body>
+</html>
+
