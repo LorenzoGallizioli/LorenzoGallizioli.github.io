@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scelta Si/No</title>
+    <title>Valentine's Day</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: pink;
         }
         button {
             padding: 10px 20px;
@@ -15,22 +16,30 @@
             margin: 10px;
             cursor: pointer;
         }
+        img{
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
-    <h2>Fai una scelta: Si o No</h2>
+    <h2>Vuoi essere il mio San Valentino?</h2>
+    <img src="https://cdn.studenti.stbm.it/images/2023/02/03/san-valentino-storia_600x400.jpeg">
+    <br></br>
     <button id="siButton">Si</button>
     <button id="noButton">No</button>
     
     <script>
         // Funzione che gestisce il click sul pulsante "Si"
         document.getElementById('siButton').addEventListener('click', function() {
-            alert('Hai scelto SI.');
+            alert('COMPLIMENTI!!! Hai vinto una cena al SUSHIIIIII!!!');
         });
 
         // Funzione che gestisce il click sul pulsante "No"
         document.getElementById('noButton').addEventListener('click', function() {
-            alert('Hai scelto NO.');
+            alert('Hai scelto NO. Rispetto la tua decisione ma soffriro\' tanto...');
         });
     </script>
 </body>
