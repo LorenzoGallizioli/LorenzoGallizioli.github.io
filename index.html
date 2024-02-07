@@ -11,6 +11,7 @@
             background-color: pink;
         }
         button {
+            display: inline;
             padding: 10px 20px;
             font-size: 16px;
             margin: 10px;
@@ -26,20 +27,38 @@
 </head>
 <body>
     <h2>Vuoi essere il mio San Valentino?</h2>
-    <img src="https://cdn.studenti.stbm.it/images/2023/02/03/san-valentino-storia_600x400.jpeg">
+    <img id="image" src="https://cdn.studenti.stbm.it/images/2023/02/03/san-valentino-storia_600x400.jpeg">
     <br></br>
     <button id="siButton">Si</button>
     <button id="noButton">No</button>
     
     <script>
+        const siButton = document.getElementById('siButton');
+        const noButton = document.getElementById('noButton');
+        const img = document.getElementById("image");
+        const h2 = document.querySelector('h2');
         // Funzione che gestisce il click sul pulsante "Si"
-        document.getElementById('siButton').addEventListener('click', function() {
-            alert('COMPLIMENTI!!! Hai vinto una cena al SUSHIIIIII!!!');
+        siButton.addEventListener('click', function() {
+            img.src = "https://www.todis.it/wp-content/uploads/2023/05/sushi-fatto-in-casa.jpg";
+                    noButton.style.visibility = "hidden";
+                    siButton.style.visibility = "hidden";
+                    h2.textContent = "COMPLIMENTI!!! Hai vinto una cena al SUSHIIIIII!!!";
         });
 
         // Funzione che gestisce il click sul pulsante "No"
-        document.getElementById('noButton').addEventListener('click', function() {
-            alert('Hai scelto NO. Rispetto la tua decisione ma soffriro\' tanto...');
+        noButton.addEventListener('click', function() {
+            noButton.textContent = "Sicura?";
+            noButton.addEventListener('click', function() {
+                noButton.textContent = "100%?";
+                noButton.addEventListener('click', function() {
+                    noButton.textContent = "No";
+                    img.src = "https://www.stickersmurali.com/it/img/aspemoj44-jpg/folder/products-listado-merchanthover/adesivi-faccia-triste-che-piange.jpg";
+                    noButton.style.visibility = "hidden";
+                    siButton.style.visibility = "hidden";
+                    h2.textContent = 'Hai scelto NO! Rispetto la tua scelta anche se saro\' molto triste :(';
+
+                })
+            });
         });
     </script>
 </body>
