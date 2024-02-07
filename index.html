@@ -23,40 +23,56 @@
             margin-bottom: 20px;
             border-radius: 50%;
         }
+        #gif {
+            border-radius: 0%;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+        }
+        
     </style>
 </head>
 <body>
-    <h2>Vuoi essere il mio San Valentino?</h2>
+    <h2>Vuoi essere la mia Valentina?</h2>
     <img id="image" src="https://cdn.studenti.stbm.it/images/2023/02/03/san-valentino-storia_600x400.jpeg">
+    <img id="gif" src="https://media.tenor.com/q33Nb2p64FIAAAAi/love.gif" hidden>
     <br></br>
-    <button id="siButton">Si</button>
-    <button id="noButton">No</button>
+    <button id="siButton">Si❤️</button>
+    <button id="noButton">No😠</button>
     
     <script>
         const siButton = document.getElementById('siButton');
         const noButton = document.getElementById('noButton');
         const img = document.getElementById("image");
         const h2 = document.querySelector('h2');
-        // Funzione che gestisce il click sul pulsante "Si"
+        const gif = document.getElementById("gif");
++        // Funzione che gestisce il click sul pulsante "Si"
         siButton.addEventListener('click', function() {
-            img.src = "https://www.todis.it/wp-content/uploads/2023/05/sushi-fatto-in-casa.jpg";
+            siButton.textContent = "DAVVEROO?🤩🤩";
+            siButton.addEventListener('click', function() {
+                img.src = "https://www.todis.it/wp-content/uploads/2023/05/sushi-fatto-in-casa.jpg";
                     noButton.style.visibility = "hidden";
                     siButton.style.visibility = "hidden";
                     h2.textContent = "COMPLIMENTI!!! Hai vinto una cena al SUSHIIIIII!!!";
+                gif.src="https://media.tenor.com/q33Nb2p64FIAAAAi/love.gif";
+                gif.hidden = false;
+            })
+            
         });
 
         // Funzione che gestisce il click sul pulsante "No"
         noButton.addEventListener('click', function() {
-            noButton.textContent = "Sicura?";
+            noButton.textContent = "Sicura?🥺";
             noButton.addEventListener('click', function() {
-                noButton.textContent = "100%?";
+                noButton.textContent = "100%🥺🥺?";
                 noButton.addEventListener('click', function() {
                     noButton.textContent = "No";
                     img.src = "https://www.stickersmurali.com/it/img/aspemoj44-jpg/folder/products-listado-merchanthover/adesivi-faccia-triste-che-piange.jpg";
                     noButton.style.visibility = "hidden";
                     siButton.style.visibility = "hidden";
                     h2.textContent = 'Hai scelto NO! Rispetto la tua scelta anche se saro\' molto triste :(';
-
+                    gif.src="https://media.tenor.com/TYSqB4d-uvoAAAAi/cute-crying.gif";
+                    gif.hidden = false;
                 })
             });
         });
